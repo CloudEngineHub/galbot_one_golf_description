@@ -93,6 +93,11 @@ any generated description.
 The main USD entry point is `usd/galbot_one_golf.usda`. Related payloads,
 textures, and example scene files are stored under `usd/`.
 
+Each gripper finger uses the three authored collision STL pieces, with a separate
+convex hull per piece. The fingertip physics material uses static/dynamic friction
+of `1.5` and restitution of `0`. Validate the collision geometry and material
+bindings with `python3 scripts/validate_gripper_collisions.py` (requires `usd-core`).
+
 ## Package Layout
 
 - `xacro/`: source robot descriptions
