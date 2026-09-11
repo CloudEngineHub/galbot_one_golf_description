@@ -1257,14 +1257,45 @@ def Xform "galbot_one_golf"
         )
         {
             def Xform "link3" (
-                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexHullCollisionAPI"]
                 instanceable = true
                 prepend references = @./instances.usda@</Instances/mesh_70>
             )
             {
-                uniform token physics:approximation = "convexHull"
-                bool physics:collisionEnabled = 1
                 token visibility = "inherited"
+            }
+        }
+
+        def Xform "collisions" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            instanceable = false
+        )
+        {
+            rel material:binding:physics = </galbot_one_golf/VisualMaterials/M_gripper_physics> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            def Xform "link_3_collision_01" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/mesh_71>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Xform "link_3_collision_02" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/mesh_72>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Xform "link_3_collision_03" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/mesh_73>
+            )
+            {
+                uniform token purpose = "guide"
             }
         }
     }
@@ -1477,18 +1508,49 @@ def Xform "galbot_one_golf"
         )
         {
             def Xform "link3" (
-                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexHullCollisionAPI"]
                 instanceable = true
                 prepend references = @./instances.usda@</Instances/mesh_70>
             )
             {
-                uniform token physics:approximation = "convexHull"
-                bool physics:collisionEnabled = 1
                 token visibility = "inherited"
                 quatd xformOp:orient = (0, 0, 0, 1)
                 double3 xformOp:scale = (-1, 1, 1)
                 double3 xformOp:translate = (0, 0, 0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+
+        def Xform "collisions" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            instanceable = false
+        )
+        {
+            rel material:binding:physics = </galbot_one_golf/VisualMaterials/M_gripper_physics> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            def Mesh "link_3_right_collision_01" (
+                instanceable = true
+                prepend references = @./right_finger_collisions.usda@</link_3_right_collision_01>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Mesh "link_3_right_collision_02" (
+                instanceable = true
+                prepend references = @./right_finger_collisions.usda@</link_3_right_collision_02>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Mesh "link_3_right_collision_03" (
+                instanceable = true
+                prepend references = @./right_finger_collisions.usda@</link_3_right_collision_03>
+            )
+            {
+                uniform token purpose = "guide"
             }
         }
     }
@@ -2310,14 +2372,45 @@ def Xform "galbot_one_golf"
         )
         {
             def Xform "link3" (
-                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexHullCollisionAPI"]
                 instanceable = true
                 prepend references = @./instances.usda@</Instances/mesh_70>
             )
             {
-                uniform token physics:approximation = "convexHull"
-                bool physics:collisionEnabled = 1
                 token visibility = "inherited"
+            }
+        }
+
+        def Xform "collisions" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            instanceable = false
+        )
+        {
+            rel material:binding:physics = </galbot_one_golf/VisualMaterials/M_gripper_physics> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            def Xform "link_3_collision_01" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/mesh_71>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Xform "link_3_collision_02" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/mesh_72>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Xform "link_3_collision_03" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/mesh_73>
+            )
+            {
+                uniform token purpose = "guide"
             }
         }
     }
@@ -2530,18 +2623,49 @@ def Xform "galbot_one_golf"
         )
         {
             def Xform "link3" (
-                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexHullCollisionAPI"]
                 instanceable = true
                 prepend references = @./instances.usda@</Instances/mesh_70>
             )
             {
-                uniform token physics:approximation = "convexHull"
-                bool physics:collisionEnabled = 1
                 token visibility = "inherited"
                 quatd xformOp:orient = (0, 0, 0, 1)
                 double3 xformOp:scale = (-1, 1, 1)
                 double3 xformOp:translate = (0, 0, 0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+
+        def Xform "collisions" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            instanceable = false
+        )
+        {
+            rel material:binding:physics = </galbot_one_golf/VisualMaterials/M_gripper_physics> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+
+            def Mesh "link_3_right_collision_01" (
+                instanceable = true
+                prepend references = @./right_finger_collisions.usda@</link_3_right_collision_01>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Mesh "link_3_right_collision_02" (
+                instanceable = true
+                prepend references = @./right_finger_collisions.usda@</link_3_right_collision_02>
+            )
+            {
+                uniform token purpose = "guide"
+            }
+
+            def Mesh "link_3_right_collision_03" (
+                instanceable = true
+                prepend references = @./right_finger_collisions.usda@</link_3_right_collision_03>
+            )
+            {
+                uniform token purpose = "guide"
             }
         }
     }
@@ -4105,8 +4229,9 @@ def Xform "galbot_one_golf"
             token outputs:volume (
                 displayGroup = "Outputs"
             )
-            float physics:dynamicFriction = 10
-            float physics:staticFriction = 10
+            float physics:dynamicFriction = 1.5
+            float physics:restitution = 0
+            float physics:staticFriction = 1.5
         }
     }
 }
